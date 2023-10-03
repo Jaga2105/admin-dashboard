@@ -1,13 +1,9 @@
 import './App.css';
-import {Logo} from "../public/images/apple-touch-icon.png"
+import Home from './pages/Home';
 
 function App() {
   return (
-    <div className="">
-      <div className=''>
-        <img src={Logo} alt="Logo" />
-      </div>
-    </div>
+    <Home/>
   );
 }
 
