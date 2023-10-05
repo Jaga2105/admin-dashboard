@@ -9,12 +9,12 @@ const NavBar = () => {
     color: "blue", // Set the desired color here
   };
   return (
-    <div className="flex p-6">
-      <div className="hidden w-[20%] font-semibold items-center text-2xl xl:flex">
+    <div className="flex p-6 sticky top-0 left-0 right-0 bg-opacity-10 z-100 backdrop-blur-2xl">
+      <div className="hidden w-1/4 font-semibold items-center text-2xl xl:flex">
         <img src="/images/apple-touch-icon.png" alt="Logo" className="h-8 mr-2" />
         <h1>ADMIN.IO</h1>
       </div>
-      <div className="flex w-[100%] justify-between xl:w-[80%]">
+      <div className="flex w-full justify-between xl:w-3/4">
         <div className="relative flex items-center  w-full xs:w-[350px] xl:w-[300px]">
           <div className="flex justify-center items-center h-12 w-12 mr-4 rounded-full hover:bg-gray-200 cursor-pointer xl:hidden">
           <RxHamburgerMenu className="text-2xl"/>
@@ -34,7 +34,7 @@ const NavBar = () => {
             <div className="flex justify-center items-center w-12 h-12 rounded-full hover:bg-gray-200">
             <IoNotificationsOutline className="text-2xl cursor-pointer"/>
             </div>
-            <img src="/images/avatars/1.png" alt="Profile" className="rounded-full mx-6 h-12 cursor-pointer" />
+            <img src="/images/avatars/1.png" alt="Profile" className="rounded-full ml-6 h-12 cursor-pointer" />
         </div>
       </div>
     </div>
