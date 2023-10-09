@@ -2,11 +2,11 @@ import React from 'react'
 import SideBar from './SideBar'
 import Content from './Content'
 
-const Body = () => {
+const Body = ({toggleMenu}) => {
   return (
-    <div className='flex'>
-        <SideBar/>
-        <Content/>
+    <div className='flex mt-28'>
+        <SideBar toggleMenu={toggleMenu}/>
+        <Content toggleMenu={toggleMenu}/>
     </div>
   )
 }

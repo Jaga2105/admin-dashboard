@@ -9,15 +9,20 @@ import { TbIcons } from "react-icons/tb"
 import { LiaCreditCardSolid } from "react-icons/lia"
 import { FaTable } from "react-icons/fa"
 import { TbLayout2 } from "react-icons/tb"
+import SideBarModal from './modals/SideBarModal'
 
-const SideBar = () => {
+const SideBar = ({toggleMenu}) => {
     const iconStyle = {
         fontSize: '25px',
         color: 'gray-400'
     }
     
   return (
-    <div className='hidden w-1/5 pr-4 fixed h-[568px] hover:overflow-y-scroll xl:block'>
+    <>
+    {toggleMenu ?
+     <SideBarModal/>
+    : 
+    <div className={`pr-4 h-[564px] hover:overflow-y-scroll z-2 xl:block ${toggleMenu ? "block w-1/4 absolute top-0 backdrop-blur-lg" : "hidden w-1/5 fixed"}`}>
         <div className="flex pl-6 py-3 mb-2 rounded-r-full cursor-pointer hover:bg-gray-100">
             <LiaHomeSolid style={iconStyle}/>
             <span className='text-xl ml-4'>Dashboard</span>
@@ -66,8 +71,10 @@ const SideBar = () => {
             <TbLayout2 style={iconStyle}/>
             <span className='text-xl ml-4'>Form Layouts</span>
         </div>
-        
-    </div>
+    </div>}
+    
+    </>
+    
   )
 }
 
